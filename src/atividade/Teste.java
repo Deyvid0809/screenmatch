@@ -1,5 +1,7 @@
 package atividade;
 
+import java.util.Scanner;
+
 public class Teste {
     
     public static void main(String[] args) {
@@ -27,9 +29,65 @@ public class Teste {
 
         System.out.println("Maior de idade:" + pessoa.verificacaoIdade());
 
+        /*Desenvolva uma classe Produto com os atributos privados nome e preco. Utilize métodos getters e setters para acessar 
+        e modificar esses atributos. Adicione um método aplicarDesconto que recebe um valor percentual e reduz o preço do produto. */
 
+        Produto loja = new Produto();
+
+        loja.setNome("Celular");
+        loja.setPreco(2500);
+        loja.setDesconto(20);
+        loja.calcularDesconto();
         
+        /*Desenvolva uma classe Aluno com os atributos privados nome e notas. Utilize métodos getters e setters para acessar
+         e modificar esses atributos. Adicione um método calcularMedia que retorna a média das notas do aluno. */
 
+        Scanner leitura = new Scanner(System.in);
+
+        int opcao = 0;
+        int quantidadeMedia = 0;
+        int mediaNota = 0;
+        String alunoNome = "";
+
+        Aluno aluno = new Aluno();
+
+        while (opcao != 4) {
+            
+        System.out.println("Opções: 1 - Nome do aluno 2 - Nota 3 - Dados do aluno 4 - Sair:");
+        opcao = leitura.nextInt();
+        
+        switch (opcao) {
+            case 1 -> 
+                {
+                System.out.println("Digite o nome do aluno:");
+                leitura.nextLine();
+                alunoNome = leitura.nextLine();
+                aluno.setNome(alunoNome);
+                
+                }
+            case 2 -> 
+                {
+                System.out.println("Digite a nota para calculo da média:");
+                int nota = leitura.nextInt();
+                mediaNota += nota;
+                quantidadeMedia ++;
+                aluno.setNota(mediaNota);
+                aluno.setQuantidadeMedia(quantidadeMedia);
+                break;
+                }
+            case 3 ->
+                {
+                aluno.exibirFichaDoAluno();
+                break;
+                }
+            case 4 -> 
+                {
+                System.out.println("Obrigado por utilizar nossos serviços!!");
+                break;
+                }    
+        }
+        }
+        leitura.close();
     }
 
 }
