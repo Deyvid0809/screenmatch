@@ -73,6 +73,7 @@ public class Teste {
                 quantidadeMedia ++;
                 aluno.setNota(mediaNota);
                 aluno.setQuantidadeMedia(quantidadeMedia);
+
                 break;
                 }
             case 3 ->
@@ -84,10 +85,23 @@ public class Teste {
                 {
                 System.out.println("Obrigado por utilizar nossos serviços!!");
                 break;
-                }    
+                }  
+        
         }
         }
-        leitura.close();
+    leitura.close();
+
+
+    /*Desenvolva uma classe Livro com os atributos privados titulo e autor. Utilize métodos getters e setters 
+    para acessar e modificar esses atributos. Adicione um método exibirDetalhes que imprime o título e o autor do livro. */
+
+        Livro livro = new Livro();
+
+        livro.setAutor("Ricardo");
+        livro.setTitulo("Achado inesperado");
+
+        livro.exibirDetalhes();
+
     }
 
 }
