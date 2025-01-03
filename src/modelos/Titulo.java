@@ -9,6 +9,12 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    
+
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
