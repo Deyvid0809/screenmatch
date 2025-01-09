@@ -1,5 +1,6 @@
 package atividade;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Teste {
@@ -101,6 +102,22 @@ public class Teste {
         livro.setTitulo("Achado inesperado");
 
         livro.exibirDetalhes();
+
+        Pessoa pessoa1 = new Pessoa();
+
+        pessoa1.setNome("Thiago");
+        pessoa1.setIdade(10);
+
+        Pessoa pessoa2 = new Pessoa();
+
+        pessoa2.setNome("Luiza");
+        pessoa2.setIdade(20);
+        
+        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+
+        listaDePessoas.add(pessoa1);
+        listaDePessoas.add(pessoa2);
+        System.out.println("Lista de Pessoas: " + listaDePessoas);
 
     }
 
