@@ -1,6 +1,9 @@
 package principal;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import modelos.Filme;
 import modelos.Serie;
 import modelos.Titulo;
@@ -26,6 +29,21 @@ public class PrincipalComListas {
             if(item instanceof Filme filme){
             System.out.println("Classificação: " + filme.getClassificacao());}
         }
-        
+
+        ArrayList<String> buscarPorArtista = new ArrayList<>();
+
+        buscarPorArtista.add("Marco");
+        buscarPorArtista.add("Jenifer");
+        buscarPorArtista.add("Ana");
+        System.out.println(buscarPorArtista);
+        Collections.sort(buscarPorArtista);
+        System.out.println(buscarPorArtista);
+
+        Collections.sort(lista);
+        System.out.println(lista);
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println(lista);
     }
+
+
 }
