@@ -2,6 +2,8 @@ package atividade4;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class teste {
     public static void main(String[] args) {
@@ -29,6 +31,27 @@ public class teste {
         Collections.sort(listaDTitulos);
 
         System.out.println(listaDTitulos);
+
+        
+        List<String> listaPolimorfica;
+
+        listaPolimorfica = new LinkedList<>();
+        
+        listaPolimorfica.add("Pão");
+        listaPolimorfica.add("Manteiga");
+        listaPolimorfica.add("Mortandela");
+
+        System.out.println("LinkedList:" + listaPolimorfica);
+
+        listaPolimorfica = new ArrayList<>();
+
+        listaPolimorfica.add("Pão1");
+        listaPolimorfica.add("Manteiga1");
+        listaPolimorfica.add("Mortandela1");
+
+        
+        System.out.println("ArrayList:" + listaPolimorfica);
+        
 
     }
 }
