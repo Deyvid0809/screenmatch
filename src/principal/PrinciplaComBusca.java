@@ -6,12 +6,19 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.util.Scanner;
 
 public class PrinciplaComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
+        Scanner ler = new Scanner(System.in);
+
+    String buscar = ler.next();
+
+    String endereco = "https://www.omdbapi.com/?t=" + buscar + "&apikey=6cacc42";
+
         HttpClient client = HttpClient.newHttpClient();
    HttpRequest request = HttpRequest.newBuilder()
-         .uri(URI.create("https://www.omdbapi.com/?t=matrix&apikey=6cacc42"))
+         .uri(URI.create(endereco))
          .build();
 
     HttpResponse<String> response = client
