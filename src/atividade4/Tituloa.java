@@ -1,8 +1,10 @@
 package atividade4;
 
-public class Titulo implements Comparable<Titulo> {
+public class Tituloa implements Comparable<Tituloa> {
 
     private String nome;
+
+
 
     public String getNome() {
         return nome;
@@ -15,7 +17,7 @@ public class Titulo implements Comparable<Titulo> {
     }
 
     @Override
-    public int compareTo(Titulo outroNome) {
+    public int compareTo(Tituloa outroNome) {
         
         return this.getNome().compareTo(outroNome.getNome());
     }

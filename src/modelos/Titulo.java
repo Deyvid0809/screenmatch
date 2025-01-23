@@ -1,6 +1,11 @@
 package modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo> {
+
+    
+    
 
     private String nome;
     private int anoDeLancamento;
@@ -8,6 +13,10 @@ public class Titulo implements Comparable<Titulo> {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
+
+    public Titulo() {
+        // Construtor sem argumentos necessário para o Gson funcionar
+    }
 
     public Titulo(String nome, int anoDeLancamento){
         this.nome = nome;
@@ -66,5 +75,18 @@ public class Titulo implements Comparable<Titulo> {
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
     }
+
+    @Override
+    public String toString() {
+        return "Titulo:" + nome + " AnoDeLancamento:" + anoDeLancamento + "Duração:" + duracaoEmMinutos;
+    }
+
+            
+                public Titulo(TituloOmdb meuTituloOmdb) {
+                    this.nome = meuTituloOmdb.title();
+                    this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+                this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
+    }
+
     
 }

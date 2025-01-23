@@ -8,19 +8,19 @@ import java.util.List;
 public class teste {
     public static void main(String[] args) {
         
-        Titulo titulo = new Titulo();
+        Tituloa titulo = new Tituloa();
 
         titulo.setNome("Argos");
         
-        Titulo titulo1 = new Titulo();
+        Tituloa titulo1 = new Tituloa();
 
         titulo1.setNome("Vitor");
 
-        Titulo titulo2 = new Titulo();
+        Tituloa titulo2 = new Tituloa();
 
         titulo2.setNome("Ana");
 
-        ArrayList<Titulo> listaDTitulos = new ArrayList<>();
+        ArrayList<Tituloa> listaDTitulos = new ArrayList<>();
 
         listaDTitulos.add(titulo);
         listaDTitulos.add(titulo1);
